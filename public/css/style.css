@@ -1,0 +1,475 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: linear-gradient(135deg, #d7f0ffd1, rgba(191, 230, 209, .35));
+    color: #333;
+    height: 100vh;
+}
+
+:root {
+    --main-color: #569ff6;
+    --text-color: #333;
+    --light-green: #e9f4e4;
+    --light-gray: #f7f7f7;
+}
+
+/* ------------------------------
+ ヘッダー（共通）
+------------------------------ */
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: none;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    transition: opacity 0.3s ease;
+}
+
+.logo img:hover {
+    opacity: 0.8;
+}
+
+/* ログインボタンと新規登録ボタンのスタイル */
+.header-button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* ログインボタン */
+.header-button.login {
+    color: var(--text-color);
+    background-color: #e0e0e0;
+}
+
+.header-button.login:hover {
+    background-color: #cccccc;
+}
+
+/* 新規登録ボタン */
+.header-button.signup {
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+.header-button.signup:hover {
+    background-color: #418cd0;
+}
+
+/* マイページ */
+.header-button.mypage {
+    color: #888;
+    /* 初期状態はグレー */
+    background-color: transparent;
+    /* 背景なし */
+}
+
+.header-button.mypage:hover {
+    color: var(--main-color);
+    /* hover時にメインカラー */
+}
+
+/* ログアウト */
+.header-button.logout {
+    color: #888;
+    /* 初期状態はグレー */
+    background-color: transparent;
+    /* 背景なし */
+}
+
+.header-button.logout:hover {
+    color: var(--main-color);
+    /* hover時にメインカラー */
+}
+
+
+/* ------------------------------
+ topページ
+------------------------------ */
+.bg-image img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.bg-image2 img {
+    max-width: 550px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    text-align: center;
+}
+
+.section-1 {
+    background-color: #eaf6f9;
+}
+
+.main-content h1 {
+    font-size: 2em;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    font-size: 1em;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.section-2 {
+    background-color: var(--light-green);
+}
+
+.section-2 .content h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+
+.section-3 {
+    background-color: var(--light-gray);
+}
+
+.section-3 .content {
+    width: 80%;
+}
+
+.section-3 h2 {
+    font-size: 2em;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.section-3 .item-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.section-3 .item {
+    background-color: #fff;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------
+ signupページ、loginページ共通
+------------------------------ */
+.signup-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 70px 20px;
+    min-height: 80vh;
+    text-align: center;
+}
+
+.signup-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.signup-form {
+    background-color: #fff;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.signup-button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup-button:hover {
+    background-color: #418cd0;
+}
+
+
+/* ------------------------------
+ mypage
+------------------------------ */
+/* 「あなたの獲得ポイント」セクション */
+.mypage-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+.points {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px 0;
+}
+
+.points h2 {
+    font-size: 2em;
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+
+.points-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .points-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+}
+
+.point-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+}
+
+.point-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.point-card p {
+    font-size: 0.875rem;
+    color: #666;
+    font-weight: normal;
+}
+
+.send-points-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.send-points-button:hover {
+    background-color: #418cd0;
+}
+
+.material-icons {
+    font-size: 24px;
+    color: #fff;
+}
+
+/* ボタン */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #418cd0;
+}
+
+/* ------------------------------
+ ポイント発行画面（/issue）
+------------------------------ */
+.issue-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.issue-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.issue-form {
+    background-color: #fff;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+input[type="file"] {
+    padding: 5px;
+    background-color: #f7f7f7;
+}
+
+/* ------------------------------
+ send
+------------------------------ */
+.send-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.send-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.send-form {
+    background-color: #fff;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* .form-group {
+    margin-bottom: 15px;
+} */
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.url-container {
+    margin-top: 20px;
+}
+
+/* .copy-button {} */
+
+
+/* フッター */
+footer {
+    background-color: #fff;
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}

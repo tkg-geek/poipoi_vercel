@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poipoi - マイページ</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" type="image/png" href="/img/android-chrome-192x192.png" />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      href="/img/apple-touch-icon.png"
+    />
+    <link rel="icon" href="/img/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ヘッダーのインクルード -->
+    <%- include('header') %>
+
+    <main>
+      <section class="points">
+        <h1 class="mypage-title"><%= userName %>さんのポイント</h1>
+        <div class="points-grid">
+          <% points.forEach(function(point) { %>
+          <div class="point-card">
+            <h3><%= point.pointName %></h3>
+            <p><%= point.pointDescription %></p>
+            <p>By <%= point.creatorName %>さん</p>
+            <p>保有ポイント：<%= %>0pt</p>
+            <% if (session.username === point.creatorName) { %>
+            <!-- ログインユーザーとポイントの発行者が一致した場合のみ表示 -->
+            <a href="/send" class="send-points-button">
+              <span class="material-icons">redeem</span>
+            </a>
+            <% } %>
+          </div>
+          <% }); %>
+        </div>
+        <a href="/issue" class="cta-button">ポイントを発行する</a>
+      </section>
+    </main>
+  </body>
+</html>

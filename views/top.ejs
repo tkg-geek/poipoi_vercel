@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poipoi - トップページ</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" type="image/png" href="/img/android-chrome-192x192.png" />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      href="/img/apple-touch-icon.png"
+    />
+    <link rel="icon" href="/img/favicon.ico" />
+  </head>
+  <body>
+    <!-- ヘッダーのインクルード -->
+    <%- include('header') %>
+
+    <!-- セクション1 -->
+    <section class="section section-1">
+      <div class="main-content">
+        <h1>ちょっとした思いやりを、PoiPoiで。</h1>
+        <p>
+          PoiPoiが提供するのは、<br />自分でポイントを発行する新しいポイントライフスタイルです。
+        </p>
+        <div class="bg-image">
+          <img src="/img/bg1.png" alt="" />
+        </div>
+        <% if (!session.userId) { %>
+        <a href="/signup" class="cta-button">今すぐ始める</a>
+        <% } %>
+      </div>
+    </section>
+
+    <!-- セクション2 -->
+    <section class="section section-2">
+      <div class="content">
+        <h2>「感謝」や「褒め」をポイントにして送り合おう。</h2>
+        <p>
+          ポイントを送る側も受け取る側もちょっぴりハッピー。<br />さりげない日常が、嬉しさで溢れる毎日へ。
+        </p>
+        <div class="bg-image2">
+          <img src="/img/bg2.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- セクション3 -->
+    <!-- <section class="section section-3">
+      <div class="content">
+        <h2>導入実績</h2>
+        <div class="item-list">
+          <div class="item">アイテム1</div>
+          <div class="item">アイテム2</div>
+          <div class="item">アイテム3</div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- フッター -->
+    <footer class="footer">
+      <p>©TKG</p>
+    </footer>
+  </body>
+</html>

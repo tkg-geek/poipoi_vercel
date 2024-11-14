@@ -1,0 +1,20 @@
+<header class="header">
+  <div class="header-container">
+    <div class="logo">
+      <a href="/">
+        <img src="/img/poipoi_logo.svg" alt="Poipoi Logo" />
+      </a>
+    </div>
+    <div class="header-buttons">
+      <% if (!session.userId) { %>
+      <!-- ログインしていない場合 -->
+      <a href="/login" class="header-button login">ログイン</a>
+      <a href="/signup" class="header-button signup">新規登録</a>
+      <% } else { %>
+      <!-- ログインしている場合 -->
+      <a href="/mypage" class="header-button mypage">マイページ</a>
+      <a href="/logout" class="header-button logout">ログアウト</a>
+      <% } %>
+    </div>
+  </div>
+</header>
